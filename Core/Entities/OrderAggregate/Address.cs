@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Core.Entities.OrderAggregate
+﻿namespace Core.Entities.OrderAggregate
 {
-   public class Address
+    public class Address
     {
         public Address()
         {

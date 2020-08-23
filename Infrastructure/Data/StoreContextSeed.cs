@@ -9,6 +9,7 @@ using Core.Entities;
 using Core.Entities.OrderAggregate;
 using Microsoft.Extensions.Logging;
 
+
 namespace Infrastructure.Data
 {
     public class StoreContextSeed
@@ -74,8 +75,6 @@ namespace Infrastructure.Data
 
                     await context.SaveChangesAsync();
                 }
-
-
             }
             catch (Exception ex)
             {

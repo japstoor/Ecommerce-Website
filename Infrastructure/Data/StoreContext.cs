@@ -34,7 +34,7 @@ namespace Infrastructure.Data
                     var properties = entityType.ClrType.GetProperties().Where(p => p.PropertyType
                     == typeof(decimal));
                     var dateTimeProperties = entityType.ClrType.GetProperties()
-                        .Where(p => p.PropertyType == typeof(DateTimeOffset));
+                       .Where(p => p.PropertyType == typeof(DateTimeOffset));
                     foreach (var property in properties)
                     {
                         modelBuilder.Entity(entityType.Name).Property(property.Name)
