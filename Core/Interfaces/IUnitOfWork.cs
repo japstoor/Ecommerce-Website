@@ -9,4 +9,4 @@ namespace Core.Interfaces
         IGenericRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity;
         Task<int> Complete();
     }
-}
+}   
