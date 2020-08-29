@@ -15,14 +15,16 @@ namespace API.Controllers
     public class PaymentsController : BaseApiController
     {
         private readonly IPaymentService _paymentService;
-        private const string WhSecret = "whsec_Fi1HGTqU7oiiWCnc84qsa9ELiVNfU7wz";
+        private readonly string _whSecret;
         private readonly ILogger<IPaymentService> _logger;
-        public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger)
+        public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger,
+            IConfiguration config)
         {
             _logger = logger;
             _paymentService = paymentService;
+            _whSecret = config.GetSection("StripeSettings:WhSecret").Value;
         }
-        [Authorize]
+        [Authorize] 
         [HttpPost("{basketId}")]
         public async Task<ActionResult<CustomerBasket>> CreateOrUpdatePaymentIntent(string basketId)
         {
@@ -38,7 +40,8 @@ namespace API.Controllers
         {
             var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
 
-            var stripeEvent = EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"], WhSecret);
+            var stripeEvent = EventUtility.ConstructEvent(json, Request.Headers["Stripe-Signature"]
+               , _whSecret);
 
             PaymentIntent intent;
             Order order;
