@@ -1,4 +1,4 @@
-# Ecommerce-Website
+# Ecommerce-Website using ASP.NET Core and Angular
 <p align="center" width="100%">
     <img width="70%" src="https://github.com/japstoor/Ecommerce-Website/blob/master/ecomgif.gif"> 
 </p>
@@ -6,7 +6,6 @@
 In this section, you will learn how to build full fledged Ecommerce app using asp.net core and angular 9. Below are the key takeaways from this project. Anyone who wants to learn and write professional enterpise projects can refer this project. This project not only illustrates how to implement all layers to the point rather it adheres to best practices as followed by industry.
 
 Here, you will learn variety of technologies like
-
 * Angular Lazy loading
 * Angular Routing
 * Angular Reactive Forms
@@ -22,6 +21,7 @@ Here, you will learn variety of technologies like
 * Unit of Work Pattern
 * Specification Pattern
 * Caching
+
 I have shipped two branches in Github. Master branch is meant for development cut and production is for finished product. While going through the code, you will see how to implement best practices using tons of client/server techniques. Here, you will see
 
 * How to use specification pattern in conjunction with Repository and Unit of Work pattern
