@@ -23,7 +23,7 @@ Here, you will learn variety of technologies like
 * Specification Pattern
 * Caching
 
-I have shipped two branches in Github. Master branch is meant for development cut and production is for finished product. While going through the code, you will see how to implement best practices using tons of client/server techniques. Here, you will see
+ While going through the code, you will see how to implement best practices using tons of client/server techniques. Here, you will see
 
 * How to use specification pattern in conjunction with Repository and Unit of Work pattern
 * How to use multiple DbContext to separate business logic with Identities
